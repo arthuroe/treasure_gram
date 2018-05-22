@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 800px;
   padding-top: 40px;
 }
 
@@ -66,17 +66,22 @@ body {
 
 .treasure-photo {
   background: #fdf2e1;
-  float: left;
-  margin-right: 5%;
   padding: 20px;
   position: relative;
   text-align: center;
-  width: 50%;
+  max-width: 100%;
+  display: block;
+}
+
+.treasure-detail-photo {
+  float: left;
 }
 
 .treasure-photo img {
   height: 180px;
   max-width: 100%;
+  margin: 0 auto;
+  display: block;
 }
 
 .treasure-table {
