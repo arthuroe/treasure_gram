@@ -14,7 +14,7 @@
 
             <div class="panel-body">
               <div class="treasure-photo">
-                <img src="{{ treasure.img_url }}" height="100">
+                <img src="{{ treasure.image.url }}" height="100">
               </div>
 
             </div>
@@ -25,5 +25,19 @@
         </div><br><div class="row">
       {% endif %}
       {% endfor %}
+    </div>
+    <div class="treasure panel panel-default add_form">
+      <div class="panel-heading">
+        <h3 class="panel-title">Add Treasure</h3>
+      </div>
+      <div class="panel-body">
+        <form enctype="multipart/form-data" action="post_url/" method="post">
+          {% csrf_token %}
+          <div class="field-wrapper">
+            {{ form.as_p }}
+          </div>
+          <input type="submit" value="submit" />
+        </form>
+    </div>
     </div>
 {% endblock %}
